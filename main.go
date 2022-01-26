@@ -66,7 +66,9 @@ func main() {
         })
     }
 
+    fmt.Println("# List of nodes")
     for _, el := range infos {
-        fmt.Printf("%s:\t%s\n%s\n\n", el.cnt, el.title, el.desc)
+        fmt.Printf("### %s: %s\n", el.cnt, el.title)
+        fmt.Printf("- %s\n", el.desc)
     }
 }
