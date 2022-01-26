@@ -44,7 +44,7 @@ func main() {
         // Get HTML of node list
         var html string
         err := chromedp.Run(ctx,
-            chromedp.Navigate(path + fmt.Sprintf("%d", pages)),
+            chromedp.Navigate(path + fmt.Sprintf("%d", i + 1)),
             chromedp.WaitVisible(`.gistbox-type`, chromedp.NodeVisible, chromedp.ByQuery),
             chromedp.InnerHTML(`.gistlist`, &html, chromedp.NodeVisible, chromedp.ByQuery),
         )
